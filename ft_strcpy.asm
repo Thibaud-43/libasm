@@ -2,6 +2,10 @@
 
 section .text
 
+;char *strcpy(char *dest, const char *src)
+; rdi = dest
+; rsi = src
+
 ft_strcpy:
 	xor rcx, rcx
 	jmp debut
@@ -15,5 +19,5 @@ debut:
 	jmp debut
 
 fin:
-	mov rax, rcx
+	mov rax, rdi
 	ret

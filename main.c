@@ -12,8 +12,7 @@ extern ft_strdup();
 
 int		main(int argc, char **argv)
 {
-	char *buff;
-	
-	buff = ft_strdup(argv[1]);
-	printf("retour de strdup : %s \n", buff);
+	char dest[100];
+	ft_read(0, dest, 32);
+	printf(" dup : %d", ft_strdup(dest));
 }
