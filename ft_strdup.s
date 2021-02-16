@@ -13,18 +13,17 @@
 section .text
 
 ft_strdup:
-	xor	rax, rax
-	call	ft_strlen
+	call	ft_strlen wrt ..plt
 	push	rdi
 	mov	rdi, rax
 	inc	rdi
-	call	malloc WRT ..plt
+	call	malloc wrt ..plt
 	cmp	rax, 0
 	je	exit
 	pop	rdi
-	mov	rdi, rax
 	mov	rsi, rdi
-	call	ft_strcpy
+	mov	rdi, rax
+	call	ft_strcpy wrt ..plt
 	ret
 exit:
 	ret
