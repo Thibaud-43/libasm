@@ -1,8 +1,8 @@
-	global	_ft_strcmp
+	global	ft_strcmp
 
 	section .text
 
-_ft_strcmp:
+ft_strcmp:
 	xor	rcx, rcx
 	xor	rax, rax
 	xor	rbx, rbx
@@ -11,6 +11,10 @@ _ft_strcmp:
 begin:
 	mov al, BYTE [rdi + rcx]
 	mov bl, BYTE [rsi + rcx]
+	cmp al, 0
+	je stop
+	cmp bl, 0
+	je stop
 	cmp	al, bl
 	jne stop
 	inc rcx

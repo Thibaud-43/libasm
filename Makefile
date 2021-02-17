@@ -27,7 +27,7 @@ try: all
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f try_libasm
+	rm -f a.out
 	rm -f test
 
 re: fclean all
